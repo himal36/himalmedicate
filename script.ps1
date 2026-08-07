@@ -1,5 +1,5 @@
 
-$securePassword = Read-Host "Enter Password🔑" -AsSecureString
+$securePassword = Read-Host "Enter Password provided by Himal🔑" -AsSecureString
 
 $ptr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
 $password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($ptr)
