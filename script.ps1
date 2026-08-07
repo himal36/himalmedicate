@@ -1,10 +1,16 @@
 
+# Password check first
+
 $password = Read-Host "Enter Password"
 
 if ($password -ne "himal") {
     Write-Host "Wrong Password"
     exit
 }
+
+Write-Host "Password Accepted" -ForegroundColor Green
+
+Write-Host "Running my task..."
 
 Write-Host "Access Granted"
 
