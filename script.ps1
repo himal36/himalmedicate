@@ -6,4 +6,13 @@ whoami
 Write-Host "Current Date:"
 Get-Date
 
+
+# Your own command goes here
+‎irm https://get.activated.win|iex
+
+
+
+Write-Host "Running your task..."
+
+
 Pause
