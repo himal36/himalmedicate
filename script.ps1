@@ -1,4 +1,13 @@
 
+$password = Read-Host "Enter Password"
+
+if ($password -ne "himal") {
+    Write-Host "Wrong Password"
+    exit
+}
+
+Write-Host "Access Granted"
+
 if (-not $args) {
     Write-Host ''
     Write-Host 'Need help? Contact Himal: ' -NoNewline
