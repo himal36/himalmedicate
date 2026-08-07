@@ -1,7 +1,5 @@
-[Console]::Beep(523,150)  # C
-[Console]::Beep(659,150)  # E
-[Console]::Beep(784,200)  # G
-[Console]::Beep(1046,300) # High C
+Add-Type -AssemblyName System.Windows.Forms
+[System.Windows.Forms.SystemSounds]::Asterisk.Play()
 $securePassword = Read-Host "Enter Password provided by Himal" -AsSecureString
 
 $ptr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
