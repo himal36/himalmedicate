@@ -1,17 +1,17 @@
 
-$securePassword = Read-Host "Enter Password" -AsSecureString
+$securePassword = Read-Host "Enter Password🔑" -AsSecureString
 
 $ptr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
 $password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($ptr)
 
 if ($password -eq "himal") {
 
-    Write-Host "Password Accepted" -ForegroundColor Green
+    Write-Host "Password Accepted 😇" -ForegroundColor Green
 
 
 if (-not $args) {
     Write-Host ''
-    Write-Host 'Need help? Check our homepage: ' -NoNewline
+    Write-Host 'Need help? Contact Himal😊: ' -NoNewline
     Write-Host 'https://massgrave.dev' -ForegroundColor Green
     Write-Host ''
 }
@@ -64,7 +64,7 @@ if (-not $args) {
         'https://dev.azure.com/massgrave/Microsoft-Activation-Scripts/_apis/git/repositories/Microsoft-Activation-Scripts/items?path=/MAS/All-In-One-Version-KL/MAS_AIO.cmd&versionType=Commit&version=05c4f881efec946c0040cdd552d1afa9a519704b',
         'https://git.activated.win/Microsoft-Activation-Scripts/plain/MAS/All-In-One-Version-KL/MAS_AIO.cmd?id=05c4f881efec946c0040cdd552d1afa9a519704b'
     )
-    Write-Progress -Activity "Downloading..." -Status "Please wait"
+    Write-Progress -Activity "Downloading....⬇️" -Status "Please wait केही समय धैर्य गर्नुहोस्"
     $errors = @()
     foreach ($URL in $URLs | Sort-Object { Get-Random }) {
         try {
