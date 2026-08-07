@@ -1,22 +1,17 @@
 
-# Password check first
+$securePassword = Read-Host "Enter Password" -AsSecureString
 
-$password = Read-Host "Enter Password"
+$ptr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
+$password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($ptr)
 
-if ($password -ne "himal") {
-    Write-Host "Wrong Password"
-    exit
-}
+if ($password -eq "himal") {
 
-Write-Host "Password Accepted" -ForegroundColor Green
+    Write-Host "Password Accepted" -ForegroundColor Green
 
-Write-Host "Running my task..."
-
-Write-Host "Access Granted"
 
 if (-not $args) {
     Write-Host ''
-    Write-Host 'Need help? Contact Himal: ' -NoNewline
+    Write-Host 'Need help? Check our homepage: ' -NoNewline
     Write-Host 'https://massgrave.dev' -ForegroundColor Green
     Write-Host ''
 }
@@ -148,3 +143,22 @@ if (-not $args) {
     CheckFile $FilePath
     Remove-Item -Path $FilePath
 } @args
+
+    Write-Host "Running your task..."
+
+    # Example:
+    Write-Host "Task completed"
+
+}
+else {
+
+    Write-Host "Wrong Password" -ForegroundColor Red
+    exit
+
+}
+
+
+# Clear password variable
+$password = $null
+
+Pause
