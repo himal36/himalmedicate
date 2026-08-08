@@ -8,7 +8,6 @@ $speak.SpeakAsync("Please enter the password. The password is provided by Himal 
 
 $securePassword = Read-Host "Enter Password Provided by Himal" -AsSecureString
 
-$speak.SpeakAsyncCancelAll()
 $speak.Dispose()
 
 
