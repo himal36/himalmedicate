@@ -1,5 +1,4 @@
-Add-Type -AssemblyName System.Windows.Forms
-[System.Windows.Forms.SystemSounds]::Asterisk.Play()
+[Console]::Beep(1000, 500)
 $securePassword = Read-Host "Enter Password provided by Himal" -AsSecureString
 
 $ptr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
