@@ -2,7 +2,7 @@ Add-Type -AssemblyName System.Speech
 
 $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
 $speak.Volume = 100
-$speak.Rate = 0
+$speak.Rate = -3
 
 $speak.Speak("Please enter the password provided by Himal Sir.")
 
