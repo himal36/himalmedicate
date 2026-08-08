@@ -2,9 +2,13 @@ Add-Type -AssemblyName System.Speech
 
 $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
 $speak.Volume = 100
-$speak.Rate = -3
+$speak.Rate = -4
 
-$speak.Speak("Please enter the password. The password is provided by Himal Sir.")
+$speak.Speak("Please enter the password.")
+Start-Sleep -Milliseconds 500
+$speak.Speak("The password is provided by Himal Sir.")
+
+$speak.Dispose()
 
 
 
