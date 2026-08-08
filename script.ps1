@@ -1,6 +1,6 @@
 Add-Type -AssemblyName System.Speech
 $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
-$speak.Speak("Please enter password")
+$speak.Speak("Please enter password provided by Himal Sir")
 
 $securePassword = Read-Host "Enter Password provided by Himal" -AsSecureString
 
