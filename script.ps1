@@ -1,4 +1,7 @@
-[Console]::Beep(1000, 500)
+Add-Type -AssemblyName System.Speech
+$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
+$speak.Speak("Please enter password")
+
 $securePassword = Read-Host "Enter Password provided by Himal" -AsSecureString
 
 $ptr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
