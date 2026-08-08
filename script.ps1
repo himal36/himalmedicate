@@ -2,19 +2,18 @@ Add-Type -AssemblyName System.Speech
 
 $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
 $speak.Volume = 100
-$speak.Rate = -4
+$speak.Rate = -3
 
-$speak.Speak("Please enter the password.")
-Start-Sleep -Milliseconds 500
-$speak.Speak("The password is provided by Himal Sir.")
+$speak.SpeakAsync("Please enter the password. The password is provided by Himal Sir.")
 
+$securePassword = Read-Host "Enter Password Provided by Himal" -AsSecureString
+
+$speak.SpeakAsyncCancelAll()
 $speak.Dispose()
 
 
 
 
-
-$securePassword = Read-Host "Enter Password provided by Himal" -AsSecureString
 $ptr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
 $password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($ptr)
 
